@@ -6,9 +6,30 @@
 Click to Feed Your Pet!
 </button>
 
+         <form ng-submit="submit()">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" name="username" placeholder="enter username" ng-model="data.username">
+                    </label>
+ 
+                    <input class="button button-block button-positive" type="submit" name="submit" value="Submit to server">                    
+                </form>
+ 
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        Response: <b ng-bind="response"></b>
+                    </div>
+                </div>
 
-<div ng-repeat="item in items track by item.id">
+
+
+
+<div ng-repeat="item in items">
   {{item.title}}
 </div>
 
-</ion-content></ion-view>
+</ion-content>
+
+
+</ion-view>
+

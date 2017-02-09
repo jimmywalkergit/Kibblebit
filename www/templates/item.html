@@ -6,13 +6,33 @@
 Click to Feed Your Pet!
 </button>
 
+        <form ng-submit="submiton()">
+           <button class="button button-block button-positive" type="submit" name="onbutton">
+             On 
+            </button>
+        </form>
+
+
+         <form ng-submit="submitoff()">
+           <button class="button button-block button-positive" type="submit" name="offbutton">
+             Off 
+            </button>
+        </form>
+                       
+                       
+
+
+       
+       
+       
+       
          <form ng-submit="submit()">
                     <label class="item item-input item-stacked-label">
-                        <span class="input-label">Username</span>
-                        <input type="text" name="username" placeholder="enter username" ng-model="data.username">
+                        <span class="input-label" style="COLOR: #800080">Enter On or Off or...</span></span>
+                        <input type="text" name="username" placeholder="Enter On or Off or..." ng-model="data.username">
                     </label>
  
-                    <input class="button button-block button-positive" type="submit" name="submit" value="Submit to server">                    
+                    <input class="button button-block button-positive" type="submit" name="submit" value="Submit to Remote Server">                    
                 </form>
  
                 <div class="card">

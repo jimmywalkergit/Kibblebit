@@ -416,21 +416,60 @@ window.queries = [
             $scope.data = {};
  
     $scope.submit = function(){
-        var link = 'http://nikola-breznjak.com/_testings/ionicPHP/api.php';
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
         $http.post(link, {username : $scope.data.username}).then(function (res){
         	
            $scope.response = res.data;
            
            $ionicPopup.alert({
-				title: 'Hi this is your pet :D',
+				title: 'Server Response Popup:',
 				template: $scope.response,
      		cssClass: 'animated bounceInDown'
 			});
+        });
+    };
+    
+        $scope.submiton = function(){
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+ 
+        $http.post(link, {username : "On"}).then(function (res){
+        	
+           $scope.response = res.data;
+           
+           $ionicPopup.alert({
+				title: 'Server Response Popup:',
+				template: $scope.response,
+     		cssClass: 'animated bounceInDown'
+			});
+			
+			
            
            
         });
     };
+    
+        $scope.submitoff = function(){
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+ 
+        $http.post(link, {username : "Off"}).then(function (res){
+        	
+           $scope.response = res.data;
+           
+           $ionicPopup.alert({
+				title: 'Server Response Popup:',
+				template: $scope.response,
+     		cssClass: 'animated bounceInDown'
+			});
+			
+			
+           
+           
+        });
+    };
+    
+    
+    
 
         $scope.$on('$destroy', function() {
             $scope.popover.remove();

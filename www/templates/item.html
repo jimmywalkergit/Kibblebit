@@ -1,12 +1,16 @@
 <ion-view class="itemView" view-title="{{item.title}}" ng-style="{ 'background-color': item.color }"><ion-content class="center-content animated slideInUp"><i class="icon {{item.icon}}" style="font-size:22em;color:white"></i></p>
 
+   
 
 
-<button class="button button-block button-positive" ng-click="openPopover2($event)">
-Click to Feed Your Pet!
-</button>
 
-        <form ng-submit="submiton()">
+
+
+
+</ion-content>
+
+<ion-content style="padding-top: 30%">
+     <form ng-submit="submiton()">
            <button class="button button-block button-positive" type="submit" name="onbutton">
              On 
             </button>
@@ -18,35 +22,22 @@ Click to Feed Your Pet!
              Off 
             </button>
         </form>
-                       
-                       
 
+             
 
-       
-       
-       
        
          <form ng-submit="submit()">
                     <label class="item item-input item-stacked-label">
-                        <span class="input-label" style="COLOR: #800080">Enter On or Off or...</span></span>
                         <input type="text" name="username" placeholder="Enter On or Off or..." ng-model="data.username">
                     </label>
  
                     <input class="button button-block button-positive" type="submit" name="submit" value="Submit to Remote Server">                    
                 </form>
  
-                <div class="card">
+
                     <div class="item item-text-wrap">
-                        Response: <b ng-bind="response"></b>
+                        Server Response: <b ng-bind="response"></b>
                     </div>
-                </div>
-
-
-
-
-<div ng-repeat="item in items">
-  {{item.title}}
-</div>
 
 </ion-content>
 

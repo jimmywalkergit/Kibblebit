@@ -132,7 +132,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
 
 })(angular, ionic);
 window.queries = [
-	//Drop tables
+/*	//Drop tables
    "DROP TABLE IF EXISTS Users;",
 	//Create tables
 	"CREATE TABLE Users (IdUser integer primary key autoincrement, Name text not null);",
@@ -147,6 +147,7 @@ window.queries = [
 	"INSERT INTO 'Users' ('Name') VALUES ('Luis Eduardo Oquendo Pérez');",
 	"INSERT INTO 'Users' ('Name') VALUES ('Carlos Rojas');",
 	"INSERT INTO 'Users' ('Name') VALUES ('Levano Castilla Carlos Miguel');"
+	*/
 ];
 (function () {
 	'use strict';
@@ -354,8 +355,8 @@ window.queries = [
         .module('App')
         .controller('AppController', AppController);
 
-    AppController.$inject = ['$scope', '$ionicPopover', '$ionicPopup'];
-    function AppController($scope, $ionicPopover, $ionicPopup) {
+    AppController.$inject = ['$scope', '$ionicPopover', '$ionicPopup', '$http'];
+    function AppController($scope, $ionicPopover, $ionicPopup, $http) {
         
         $scope.items = [
             {
@@ -412,6 +413,63 @@ window.queries = [
 			});
         };
         
+            $scope.data = {};
+ 
+    $scope.submit = function(){
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+ 
+        $http.post(link, {username : $scope.data.username}).then(function (res){
+        	
+           $scope.response = res.data;
+           
+           $ionicPopup.alert({
+				title: 'Server Response Popup:',
+				template: $scope.response,
+     		cssClass: 'animated bounceInDown'
+			});
+        });
+    };
+    
+        $scope.submiton = function(){
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+ 
+        $http.post(link, {username : "On"}).then(function (res){
+        	
+           $scope.response = res.data;
+           
+           $ionicPopup.alert({
+				title: 'Server Response Popup:',
+				template: $scope.response,
+     		cssClass: 'animated bounceInDown'
+			});
+			
+			
+           
+           
+        });
+    };
+    
+        $scope.submitoff = function(){
+        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+ 
+        $http.post(link, {username : "Off"}).then(function (res){
+        	
+           $scope.response = res.data;
+           
+           $ionicPopup.alert({
+				title: 'Server Response Popup:',
+				template: $scope.response,
+     		cssClass: 'animated bounceInDown'
+			});
+			
+			
+           
+           
+        });
+    };
+    
+    
+    
 
         $scope.$on('$destroy', function() {
             $scope.popover.remove();

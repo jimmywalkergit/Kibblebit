@@ -414,11 +414,16 @@ window.queries = [
         };
         
             $scope.data = {};
- 
+            
+ //TEXTBOX SUBMITS PHP
     $scope.submit = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+        var link2 = 'https://phpserver-jawalker.c9users.io/testvariable.php';
  
-        $http.post(link, {username : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
+ 
+ 
+ 
+        	$http.post(link, {username : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
         	
            $scope.response = res.data;
            
@@ -426,10 +431,32 @@ window.queries = [
 				title: 'Server Response Popup:',
 				template: $scope.response,
      		cssClass: 'animated bounceInDown'
-			});
+				});
+    		 });
+        
+        
+        
+        
+          $http.post(link2, {myvar1 : $scope.data.myvar1}).then(function (res){
+        	
+           $scope.myvar1response = res.data;
+           
         });
+        
+        
+                  $http.post(link2, {myvar2 : $scope.data.myvar2 }).then(function (res){
+        	
+           $scope.myvar2response = res.data;
+           
+        });
+        
+        
+        
+        
+        
     };
     
+    //ON BUTTON CALLS PHP
         $scope.submiton = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
@@ -448,7 +475,7 @@ window.queries = [
            
         });
     };
-    
+    //OFF BUTTON SUBMITS PHP
         $scope.submitoff = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  

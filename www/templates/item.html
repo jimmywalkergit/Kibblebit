@@ -29,6 +29,10 @@
          <form ng-submit="submit()">
                     <label class="item item-input item-stacked-label">
                         <input type="text" name="username" placeholder="Enter On or Off or..." ng-model="data.username">
+                        <br>
+                        <input type="text" name="myvar1" placeholder="Enter var1..." ng-model="data.myvar1">
+                        <br>
+                        <input type="text" name="myvar2" placeholder="Enter var2..." ng-model="data.myvar2">
                     </label>
  
                     <input class="button button-block button-positive" type="submit" name="submit" value="Submit to Remote Server">                    
@@ -37,6 +41,10 @@
 
                     <div class="item item-text-wrap">
                         Server Response: <b ng-bind="response"></b>
+                                            <p></p>
+                                         <b>Var1 From Server:</b> </b><b ng-bind="myvar1response"> </b>
+                                         <p></p>
+                                         <b>Var2 From Server:</b><b ng-bind="myvar2response"></b>
                     </div>
 
 </ion-content>

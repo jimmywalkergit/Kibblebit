@@ -418,7 +418,7 @@ window.queries = [
     $scope.submit = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
-        $http.post(link, {username : $scope.data.username}).then(function (res){
+        $http.post(link, {username : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
         	
            $scope.response = res.data;
            

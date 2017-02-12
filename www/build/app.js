@@ -361,12 +361,12 @@ window.queries = [
         $scope.items = [
             {
                 color: "#E47500",
-                icon: "ion-ionic",
+                icon: "bone",
                 title: "Feed Ur Pet"
             },
             {
                 color: "#5AD863",
-                icon: "ion-social-html5",
+                icon: "bone",
                 title: "HTML OR Something"
             },
             {

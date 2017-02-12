@@ -362,27 +362,34 @@ window.queries = [
             {
                 color: "#E47500",
                 icon: "bone",
-                title: "Feed Ur Pet"
+                title: "Feed Ur Pet",
+                imagepath: "img/bone.png"
+                
             },
             {
                 color: "#5AD863",
                 icon: "bone",
-                title: "HTML OR Something"
+                title: "Settings",
+                imagepath: "img/settings.png",
+                styling: "border-radius: 50%;"
             },
             {
                 color: "#F8E548",
                 icon: "ion-social-javascript",
-                title: "Too Bright"
+                title: "Too Bright",
+                imagepath: "img/bone.png"
             },
             {
                 color: "#AD5CE9",
                 icon: "ion-social-sass",
-                title: "Sass Haha"
+                title: "Kibblebit1",
+                imagepath: "img/bone.png"
             },
             {
                 color: "#3DBEC9",
                 icon: "ion-social-css3",
-                title: "CSS3"
+                title: "Kibblebit2",
+                imagepath: "img/bone.png"
             },
             //{
            //     color: "#D86B67",

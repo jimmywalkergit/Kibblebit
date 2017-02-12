@@ -1,8 +1,10 @@
-<ion-view view-title="" class="galleryView"><ion-content><ion-list><div class="row row-wrap row-no-padding"><ion-item ng-repeat="item in items" class="col col-50 button button-icon light animated bounceInUp" ng-style="{ 'background-color' : item.color }" on-tap="openItem(item)">
+<ion-view view-title="" class="galleryView"><ion-content><ion-list><div class="row row-wrap" style="padding-left:1%; padding-right:1%;"><ion-item ng-repeat="item in items" class="col col-50 button button-icon light animated bounceInUp" ng-style="{ 'background-color' : item.color }" on-tap="openItem(item)">
     
     
     
-<img height="90%" width="90%"src="img/bone.png"><p class="bold">{{ item.title }}</p></ion-item></div></ion-list>
+<img height="auto" width="40%"src="{{item.imagepath}}" style="{{item.styling}}"><p class="bold">{{ item.title }}</p>
+
+</ion-item></div></ion-list>
     
     
     

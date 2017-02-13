@@ -363,37 +363,39 @@ window.queries = [
                 color: "#E47500",
                 icon: "bone",
                 title: "Feed Ur Pet",
-                imagepath: "img/bone.png",styling: ""
+                imagepath: "img/feedbutton.png",
+                styling: "border-radius:50%;"
                 
             },
             {
                 color: "#5AD863",
-                icon: "bone",
+                icon: "",
                 title: "Settings",
                 imagepath: "img/settings.png",
-                styling: "border-radius: 50%;"
-            },
-            {
-                color: "#F8E548",
-                icon: "ion-social-javascript",
-                title: "Too Bright",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
-            {
-                color: "#AD5CE9",
-                icon: "ion-social-sass",
-                title: "Kibblebit1",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
-            {
-                color: "#3DBEC9",
-                icon: "ion-social-css3",
-                title: "Kibblebit2",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
+                styling: "border-radius: 50%;",
+                settings:"placeholder"
+            }
+           // {
+            //    color: "#F8E548",
+            //    icon: "ion-social-javascript",
+            //    title: "Too Bright",
+           //     imagepath: "img/bone.png",
+            //    styling: ""
+           // },
+           // {
+             //   color: "#AD5CE9",
+             //   icon: "ion-social-sass",
+              //  title: "Kibblebit1",
+              //  imagepath: "img/bone.png",
+            //    styling: ""
+           // },
+           // {
+            //    color: "#3DBEC9",
+             //   icon: "ion-social-css3",
+             //   title: "Kibblebit2",
+             //   imagepath: "img/bone.png",
+            //    styling: ""
+           // },
             //{
            //     color: "#D86B67",
            //     icon: "ion-social-angular",

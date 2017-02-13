@@ -665,5 +665,12 @@
           animation-delay: 200ms;
   -webkit-animation-duration: 0;
           animation-duration: 0; }
+          
+          					.fancytext{
+						color: #DDDDDD; 
+						font-weight: bold; 
+						letter-spacing: -1px; 
+						line-height: 1;
+					}
 
 /*# sourceMappingURL=style.css.map */

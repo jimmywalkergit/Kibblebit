@@ -1,13 +1,14 @@
-<ion-view view-title="" class="galleryView"><ion-content><ion-list><div class="row row-wrap" style="padding-left:1%; padding-right:1%;">
+
+<ion-view view-title="" class="galleryView" ><ion-content><ion-list><div class="row row-wrap" style="padding-left:1%; padding-right:1%;">
     
     
     <ion-item ng-repeat="item in items" class="col col-50 button button-icon light animated bounceInUp" ng-style="{ 'background-color' : item.color }" on-tap="openItem(item)">
     
     <div ng-if="item.imagepath">
-<img height="auto" width="40%"ng-src="{{item.imagepath}}" style="{{item.styling}}"><p class="bold">{{ item.title }}</p>
+<img height="auto" width="40%"ng-src="{{item.imagepath}}" style="{{item.styling}}"><p class="fancytext" style="padding-bottom:10px; font-size: 2em;">{{ item.title }}</p>
 
 
-
+
 </div>
 
 

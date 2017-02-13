@@ -363,7 +363,7 @@ window.queries = [
                 color: "#E47500",
                 icon: "bone",
                 title: "Feed Ur Pet",
-                imagepath: "img/bone.png"
+                imagepath: "img/bone.png",styling: ""
                 
             },
             {
@@ -377,19 +377,22 @@ window.queries = [
                 color: "#F8E548",
                 icon: "ion-social-javascript",
                 title: "Too Bright",
-                imagepath: "img/bone.png"
+                imagepath: "img/bone.png",
+                styling: ""
             },
             {
                 color: "#AD5CE9",
                 icon: "ion-social-sass",
                 title: "Kibblebit1",
-                imagepath: "img/bone.png"
+                imagepath: "img/bone.png",
+                styling: ""
             },
             {
                 color: "#3DBEC9",
                 icon: "ion-social-css3",
                 title: "Kibblebit2",
-                imagepath: "img/bone.png"
+                imagepath: "img/bone.png",
+                styling: ""
             },
             //{
            //     color: "#D86B67",

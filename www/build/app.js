@@ -364,7 +364,8 @@ window.queries = [
                 icon: "bone",
                 title: "Feed Ur Pet",
                 imagepath: "img/feedbutton.png",
-                styling: "border-radius:50%;"
+                styling: "border-radius:50%;",
+                isfeed: "1",
                 
             },
             {
@@ -373,7 +374,7 @@ window.queries = [
                 title: "Settings",
                 imagepath: "img/settings.png",
                 styling: "border-radius: 50%;",
-                settings:"placeholder"
+                issettings:"1",
             }
            // {
             //    color: "#F8E548",

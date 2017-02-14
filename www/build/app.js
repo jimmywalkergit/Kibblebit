@@ -368,7 +368,7 @@ window.queries = [
                 
             },
             {
-                color: "#5AD863",
+                color: "#AAAAAA",
                 icon: "",
                 title: "Settings",
                 imagepath: "img/settings.png",

@@ -363,37 +363,40 @@ window.queries = [
                 color: "#E47500",
                 icon: "bone",
                 title: "Feed Ur Pet",
-                imagepath: "img/bone.png",styling: ""
+                imagepath: "img/feedbutton.png",
+                styling: "border-radius:50%;",
+                isfeed: "1",
                 
             },
             {
-                color: "#5AD863",
-                icon: "bone",
+                color: "#AAAAAA",
+                icon: "",
                 title: "Settings",
                 imagepath: "img/settings.png",
-                styling: "border-radius: 50%;"
-            },
-            {
-                color: "#F8E548",
-                icon: "ion-social-javascript",
-                title: "Too Bright",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
-            {
-                color: "#AD5CE9",
-                icon: "ion-social-sass",
-                title: "Kibblebit1",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
-            {
-                color: "#3DBEC9",
-                icon: "ion-social-css3",
-                title: "Kibblebit2",
-                imagepath: "img/bone.png",
-                styling: ""
-            },
+                styling: "border-radius: 50%;",
+                issettings:"1",
+            }
+           // {
+            //    color: "#F8E548",
+            //    icon: "ion-social-javascript",
+            //    title: "Too Bright",
+           //     imagepath: "img/bone.png",
+            //    styling: ""
+           // },
+           // {
+             //   color: "#AD5CE9",
+             //   icon: "ion-social-sass",
+              //  title: "Kibblebit1",
+              //  imagepath: "img/bone.png",
+            //    styling: ""
+           // },
+           // {
+            //    color: "#3DBEC9",
+             //   icon: "ion-social-css3",
+             //   title: "Kibblebit2",
+             //   imagepath: "img/bone.png",
+            //    styling: ""
+           // },
             //{
            //     color: "#D86B67",
            //     icon: "ion-social-angular",
@@ -433,7 +436,7 @@ window.queries = [
  
  
  
-        	$http.post(link, {username : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
+        	$http.post(link, {mydata : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
         	
            $scope.response = res.data;
            
@@ -470,7 +473,7 @@ window.queries = [
         $scope.submiton = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
-        $http.post(link, {username : "On"}).then(function (res){
+        $http.post(link, {mydata : "On"}).then(function (res){
         	
            $scope.response = res.data;
            
@@ -489,7 +492,7 @@ window.queries = [
         $scope.submitoff = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
-        $http.post(link, {username : "Off"}).then(function (res){
+        $http.post(link, {mydata : "Off"}).then(function (res){
         	
            $scope.response = res.data;
            

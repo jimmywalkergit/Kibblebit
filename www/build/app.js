@@ -436,7 +436,7 @@ window.queries = [
  
  
  
-        	$http.post(link, {username : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
+        	$http.post(link, {mydata : $scope.data.username, myvar : 'OnOff Request' }).then(function (res){
         	
            $scope.response = res.data;
            
@@ -473,7 +473,7 @@ window.queries = [
         $scope.submiton = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
-        $http.post(link, {username : "On"}).then(function (res){
+        $http.post(link, {mydata : "On"}).then(function (res){
         	
            $scope.response = res.data;
            
@@ -492,7 +492,7 @@ window.queries = [
         $scope.submitoff = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
  
-        $http.post(link, {username : "Off"}).then(function (res){
+        $http.post(link, {mydata : "Off"}).then(function (res){
         	
            $scope.response = res.data;
            

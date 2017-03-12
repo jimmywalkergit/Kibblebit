@@ -471,7 +471,7 @@ window.queries = [
     
     //ON BUTTON CALLS PHP
         $scope.submiton = function(){
-        var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
+        var link = 'http://10.0.1.183/hello-world.php';
  
         $http.post(link, {mydata : "On"}).then(function (res){
         	

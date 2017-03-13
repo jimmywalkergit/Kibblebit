@@ -471,7 +471,10 @@ window.queries = [
     
     //ON BUTTON CALLS PHP
         $scope.submiton = function(){
-        var link = 'http://10.0.1.183/hello-world.php';
+        	//mysql php myadmin:http://10.0.1.183/phpmyadmin
+        	//raspberrypi link:http://10.0.1.183/hello-world.php
+        	//cloud9 server link:https://phpserver-jawalker.c9users.io/hello-world.php 
+        var link = 'http://phpserver-jawalker.c9users.io/hello-world.php';
  
         $http.post(link, {mydata : "On"}).then(function (res){
         	

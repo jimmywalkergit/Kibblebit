@@ -357,6 +357,21 @@ window.queries = [
 
     AppController.$inject = ['$scope', '$ionicPopover', '$ionicPopup', '$http'];
     function AppController($scope, $ionicPopover, $ionicPopup, $http) {
+    	
+    	
+    	
+    	
+    	//get last date
+    	 var lastdatelink = 'http://10.0.1.183/DisplayLastFeed.php'
+        $http.post(lastdatelink, {}).then(function (res){
+        	
+           $scope.myvar2response = res.data;
+           
+        });
+        
+    	
+    	
+    	
         
         $scope.items = [
             {
@@ -427,7 +442,7 @@ window.queries = [
         };
         
             $scope.data = {};
-            
+        	    $scope.hiddenloading = true;
  //TEXTBOX SUBMITS PHP
     $scope.submit = function(){
         var link = 'https://phpserver-jawalker.c9users.io/hello-world.php';
@@ -471,25 +486,46 @@ window.queries = [
     
     //ON BUTTON CALLS PHP
         $scope.submiton = function(){
+        	$scope.hiddenfeed = true;
         	//mysql php myadmin:http://10.0.1.183/phpmyadmin
         	//raspberrypi link:http://10.0.1.183/hello-world.php
         	//cloud9 server link:https://phpserver-jawalker.c9users.io/hello-world.php 
-        var link = 'http://phpserver-jawalker.c9users.io/hello-world.php';
- 
+        var link = 'http://10.0.1.183/runfeeder.php';
+
+        
+		
+		$scope.hiddenloading = false;
         $http.post(link, {mydata : "On"}).then(function (res){
         	
            $scope.response = res.data;
-           
+           $scope.hiddenloading = true;
+
            $ionicPopup.alert({
-				title: 'Server Response Popup:',
+				title: 'Your Pet Has Been Fed:',
 				template: $scope.response,
      		cssClass: 'animated bounceInDown'
 			});
-			
+			           $scope.hiddenfeed = false;
+     
+			        var lastdatelink = 'http://10.0.1.183//DisplayLastFeed.php'
+        
+        
+        
+        $http.post(lastdatelink, {}).then(function (res){
+        	
+           $scope.myvar2response = res.data;
+           
+        });
 			
            
            
         });
+        
+        
+        
+
+        
+        
     };
     
     
@@ -498,11 +534,12 @@ window.queries = [
         	//mysql php myadmin:http://10.0.1.183/phpmyadmin
         	//raspberrypi link:http://10.0.1.183/hello-world.php
         	//cloud9 server link:https://phpserver-jawalker.c9users.io/hello-world.php 
-        var link = 'http://141.210.119.252/runfeeder.php';
+        var link = 'http://10.0.1.183/runfeeder.php';
  
         $http.post(link, {mydata : "On"}).then(function (res){
         	
            $scope.response = res.data;
+           
            
            $ionicPopup.alert({
 				title: 'Server Response Popup:',

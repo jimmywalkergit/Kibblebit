@@ -26,54 +26,32 @@
             <div class="col col-center text-center">
 
 
+
                 <ion-content style="padding-top:15%">
+                      <div ng-hide="hiddenloading">
+                <button  class="button button-block button-outline" name="loadingbutton" height="200px" width="200px">
+                <img style="border-radius: 50%;" height="200px" width ="200px"src="img/bone.png">
+                <h1 style="color: #DDDDDD; sans-serif; font-size: 35px; font-weight: bold; letter-spacing: -1px; line-height: 1;">Loading...</h1>
+                </button>
+                
+            </div>
      <form ng-submit="submiton()">
          
-
-           <button class="button button-block button-outline" type="submit" name="onbutton" height="200px" width="200px">
+          
+            
+           <button ng-hide="hiddenfeed" class="button button-block button-outline" type="submit" name="onbutton" height="200px" width="200px">
                      <img style="border-radius: 50%;" height="200px" width ="200px"src="img/feedbutton.png">
                      <h1 style="color: #DDDDDD; sans-serif; font-size: 35px; font-weight: bold; letter-spacing: -1px; line-height: 1;" >Click To Feed Pet!</h1>
             </button>
         </form>
 
-
-         <form ng-submit="submitoff()">
-           <button class="button button-block button-positive" type="submit" name="offbutton">
-             Off 
-            </button>
-        </form>
-
-
-     <form ng-submit="submitpi()">
-         
-
-           <button class="button button-block button-outline" type="submit" name="pibutton" height="200px" width="200px">
-                     <img style="border-radius: 50%;" height="200px" width ="200px"src="img/feedbutton.png">
-                     <h1 style="color: #DDDDDD; sans-serif; font-size: 35px; font-weight: bold; letter-spacing: -1px; line-height: 1;" >Click To Contact RaspberryPi!</h1>
-            </button>
-        </form>
              
 
        
-         <form ng-submit="submit()"  style="padding-top:20%">
-                    <label class="item item-input item-stacked-label">
-                        <input type="text" name="username" placeholder="Enter On or Off or..." ng-model="data.username">
-                        <br>
-                        <input type="search" name="myvar1" placeholder="Enter var1..." ng-model="data.myvar1">
-                        <br>
-                        <input type="text" name="myvar2" placeholder="Enter var2..." ng-model="data.myvar2">
-                    </label>
- 
-                    <input class="button button-block button-positive" type="submit" name="submit" value="Submit to Remote Server">                    
-                </form>
- 
 
-                    <div class="item item-text-wrap">
-                        Server Response: <b ng-bind="response"></b>
-                                            <p></p>
-                                         <b>Var1 From Server:</b> </b><b ng-bind="myvar1response"> </b>
-                                         <p></p>
-                                         <b>Var2 From Server:</b><b ng-bind="myvar2response"></b>
+
+                    <div class="item item-text-wrap" style="background-color:#e6e6e6;">
+                                         <b>Last Feeding Time:</b><b ng-bind="myvar2response"></b>
                     </div>
 
 
